@@ -3,6 +3,7 @@ require 'common_methods'
 require 'decoder/countries'
 require 'decoder/country'
 require 'decoder/state'
+require 'decoder/county'
 
 module Decoder
 

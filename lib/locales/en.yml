@@ -718,6 +718,9 @@
       MD: 
       - Maryland
       - "24"
+      counties:
+        - name : Allegany
+          fips : 001
       WA: 
       - Washington
       - "53"
