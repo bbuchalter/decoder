@@ -24,21 +24,47 @@ class StateTest < Test::Unit::TestCase
         assert_equal "MA", @state.code
       end
     end
-    
+
     context "FIPS states from a country" do
-      setup do 
+      setup do
         @country = Decoder::Countries["US"]
         @state   = @country["MA"]
       end
-      
+
       should "properly assign the name" do
         assert_equal "Massachusetts", @state.name
       end
-      
+
       should "properly assign the fips" do
         assert_equal 25, @state.fips
       end
     end
+
+    context "Counties from a state" do
+      setup do
+        @country = Decoder::Countries["US"]
+        @state   = @country["MD"]
+        @counties = @state.counties
+      end
+
+      should "have counties" do
+        assert_not_nil @counties
+      end
+    end
+
+    context "No Counties from a state" do
+      setup do
+        @country = Decoder::Countries["US"]
+        @state   = @country["MT"]
+        @counties = @state.counties
+      end
+
+      should "have counties" do
+        assert_equal nil, @counties
+      end
+    end
+
+
   end
 
 end

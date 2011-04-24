@@ -12,7 +12,7 @@ class CountryTest < Test::Unit::TestCase
 
     context "A new country" do
       should "load the yaml" do
-        Decoder.expects(:load_yaml).returns({:en => {"US" => {:name => "United States", :states => {"MA" => "Massachusetts"}}}})
+        Decoder.expects(:load_yaml).returns({:en => {"US" => {:name => "United States", :states => {"MA" => "Massachusetts", :counties => ["Allegany", "asdf"]}}}})
 
         country = Decoder::Country.new(:code => "US", :name => "United States")
         assert_not_nil country.states
@@ -55,12 +55,14 @@ class CountryTest < Test::Unit::TestCase
           state = @country.by_fips(25)
           assert_equal Decoder::State, state.class
           assert_equal "Massachusetts", state.name
+          assert_equal 25, state.fips
         end
 
         should "return a state object of \"Massachusetts\" for \"25\"" do
           state = @country.by_fips("25")
           assert_equal Decoder::State, state.class
           assert_equal "Massachusetts", state.name
+          assert_equal 25, state.fips
         end
       end
     end
@@ -71,22 +73,18 @@ class CountryTest < Test::Unit::TestCase
       end
 
       context "For a FIPS state" do
-        should "be a hash of states" do
-          assert_equal ["Massachusetts", "25"], @country.states["MA"]
+        should "be a hash of info about the state" do
+          assert_equal({:name => "Massachusetts", :fips => "25"}, @country.states["MA"])
         end
       end
       
       context "For a non-FIPS state" do
-        should "be a hash of states" do
+        should "be a string containing the state's name" do
           assert_equal "Northern Mariana Islands", @country.states["MP"]
         end
       end
       
       context "aliases" do
-        should "be equal for #states and #counties" do
-          assert_equal @country.states, @country.counties
-        end
-
         should "be equal for #states and #provinces" do
           assert_equal @country.states, @country.provinces
         end

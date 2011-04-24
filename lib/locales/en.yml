@@ -609,171 +609,193 @@
     :states:
       MP: Northern Mariana Islands
       MT: 
-      - Montana
-      - "30"
+        :name: Montana
+        :fips: "30"
       NE: 
-      - Nebraska
-      - "31"
+        :name: Nebraska
+        :fips: "31"
       VA: 
-      - Virginia
-      - "51"
+        :name: Virginia
+        :fips: "51"
       ME: 
-      - Maine
-      - "23"
+        :name: Maine
+        :fips: "23"
       MH: Marshall Islands
       TN: 
-      - Tennessee
-      - "47"
+        :name: Tennessee
+        :fips: "47"
       LA: 
-      - Louisiana
-      - "22"
+        :name: Louisiana
+        :fips: "22"
       MS: 
-      - Mississippi
-      - "28"
+        :name: Mississippi
+        :fips: "28"
       PA: 
-      - Pennsylvania
-      - "42"
+        :name: Pennsylvania
+        :fips: "42"
       ND: 
-      - North Dakota
-      - "38"
+        :name: North Dakota
+        :fips: "38"
       AS: American Samoa
       SC: 
-      - South Carolina
-      - "45"
+        :name: South Carolina
+        :fips: "45"
       NC: 
-      - North Carolina
-      - "37"
+        :name: North Carolina
+        :fips: "37"
       KY: 
-      - Kentucky
-      - "21"
+        :name: Kentucky
+        :fips: "21"
       MI: 
-      - Michigan
-      - "26"
+        :name: Michigan
+        :fips: "26"
       AE: Armed Forces
       DE: 
-      - Delaware
-      - "10"
+        :name: Delaware
+        :fips: "10"
       MO: 
-      - Missouri
-      - "29"
+        :name: Missouri
+        :fips: "29"
       VT: 
-      - Vermont
-      - "50"
+        :name: Vermont
+        :fips: "50"
       WI: 
-      - Wisconsin
-      - "55"
+        :name: Wisconsin
+        :fips: "55"
       OH: 
-      - Ohio
-      - "39"
+        :name: Ohio
+        :fips: "39"
       UT: 
-      - Utah
-      - "49"
+        :name: Utah
+        :fips: "49"
       NY: 
-      - New York
-      - "36"
+        :name: New York
+        :fips: "36"
       SD: 
-      - South Dakota
-      - "46"
+        :name: South Dakota
+        :fips: "46"
       DC: 
-      - District of Columbia
-      - "11"
+        :name: District of Columbia
+        :fips: "11"
       AL: 
-      - Alabama
-      - "01"
+        :name: Alabama
+        :fips: "01"
       VI: Virgin Islands
       GA: 
-      - Georgia
-      - "13"
+        :name: Georgia
+        :fips: "13"
       TX: 
-      - Texas
-      - "48"
+        :name: Texas
+        :fips: "48"
       WY: 
-      - Wyoming
-      - "56"
+        :name: Wyoming
+        :fips: "56"
       IL: 
-      - Illinois
-      - "17"
+        :name: Illinois
+        :fips: "17"
       AR: 
-      - Arkansas
-      - "05"
+        :name: Arkansas
+        :fips: "05"
       RI: 
-      - Rhode Island
-      - "44"
+        :name: Rhode Island
+        :fips: "44"
       AZ: 
-      - Arizona
-      - "04"
+        :name: Arizona
+        :fips: "04"
       OR: 
-      - Oregon
-      - "41"
+        :name: Oregon
+        :fips: "41"
       CA: 
-      - California
-      - "06"
+        :name: California
+        :fips: "06"
       IN: 
-      - Indiana
-      - "18"
+        :name: Indiana
+        :fips: "18"
       CO: 
-      - Colorado
-      - 08
+        :name: Colorado
+        :fips: 08
       PW: Palau
-      MD: 
-      - Maryland
-      - "24"
-      counties:
-        - name : Allegany
-          fips : 001
+      MD:
+        :name: Maryland
+        :fips: "24"
+        :counties:
+          - Allegany
+          - Anne Arundel
+          - Baltimore
+          - Baltimore City
+          - Calvert
+          - Caroline County
+          - Carroll
+          - Cecil
+          - Charles
+          - Dorchester
+          - Frederick
+          - Garrett
+          - Harford
+          - Howard
+          - Kent
+          - Montgomery
+          - Prince George's
+          - Queen Anne's
+          - Saint Mary's
+          - Somerset
+          - Talbot
+          - Washington
+          - Wilcomico
+          - Worcester
       WA: 
-      - Washington
-      - "53"
+        :name: Washington
+        :fips: "53"
       CT: 
-      - Connecticut
-      - 09
+        :name: Connecticut
+        :fips: 09
       WV: 
-      - West Virginia
-      - "54"
+        :name: West Virginia
+        :fips: "54"
       FL: 
-      - Florida
-      - "12"
+        :name: Florida
+        :fips: "12"
       HI: 
-      - Hawaii
-      - "15"
+        :name: Hawaii
+        :fips: "15"
       ID: 
-      - Idaho
-      - "16"
+        :name: Idaho
+        :fips: "16"
       NM: 
-      - New Mexico
-      - "35"
+        :name: New Mexico
+        :fips: "35"
       MN: 
-      - Minnesota
-      - "27"
+        :name: Minnesota
+        :fips: "27"
       GU: Guam
       MA: 
-      - Massachusetts
-      - "25"
+        :name: Massachusetts
+        :fips: "25"
       AK: 
-      - Alaska
-      - "02"
+        :name: Alaska
+        :fips: "02"
       NJ: 
-      - New Jersey
-      - "34"
+        :name: New Jersey
+        :fips: "34"
       PR: 
-      - Puerto Rico
-      - "72"
+        :name: Puerto Rico
+        :fips: "72"
       FM: Federated States Of Micronesia
       NV: 
-      - Nevada
-      - "32"
+        :name: Nevada
+        :fips: "32"
       IA: 
-      - Iowa
-      - "19"
+        :name: Iowa
+        :fips: "19"
       KS: 
-      - Kansas
-      - "20"
+        :name: Kansas
+        :fips: "20"
       OK: 
-      - Oklahoma
-      - "40"
+        :name: Oklahoma
+        :fips: "40"
       NH: 
-      - New Hampshire
-      - "33"
+        :name: New Hampshire
+        :fips: "33"
   BV:
     :name: Bouvet Island
     :states: {}

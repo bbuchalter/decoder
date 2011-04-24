@@ -17,23 +17,25 @@ module Decoder
       @states = _states
     end
 
-    alias_method :counties, :states
     alias_method :provinces, :states
     alias_method :territories, :states
 
     def [](_code)
       _code = _code.to_s.upcase
       state = states[_code]
-      if state.is_a?(Array)
-        fips  = state.last
-        state = state.first
+      if state.is_a?(Hash)
+        fips  = state[:fips]
+        state = state[:name]
+#        counties = state[:counties]
       end
       Decoder::State.new(:code => _code, :name => state, :fips => fips)
     end
     
     def by_fips(fips)
       fips = fips.to_s
-      state = states.detect { |k,v| v.include?(fips) if v.is_a?(Array) }
+      state = states.detect do |state_code,info|
+        info.is_a?(Hash) && info[:fips] == fips
+      end
       self[state.first]
     end
   end
