@@ -4,4 +4,4 @@ coverage
 rdoc
 pkg
 .idea/*
-.bun
+.bundle/*
