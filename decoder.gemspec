@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = %q{decoder}
-  s.version = "0.6.5"
+  s.version = "0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Brian Cardarella"]
+  s.authors = ["Brian Cardarella", "Brian Buchalter"]
   s.date = %q{2009-11-22}
   s.description = %q{Decoder}
   s.email = %q{bcardarella@gmail.com}
